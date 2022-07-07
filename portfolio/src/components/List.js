@@ -1,8 +1,9 @@
 import React from 'react'
+import './List.css'
 
-function List({ items }) {
+function List({ items, styling }) {
     return (
-        <ul className='profile-list'>
+        <ul className={styling}>
             {items.map((item) => (
                 <li key={item.field}>
                     <span>{item.field}:</span>

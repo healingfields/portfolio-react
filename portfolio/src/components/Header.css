@@ -1,4 +1,4 @@
-.App-logo {
+.app-logo {
     height: 60px;
     pointer-events: none;
 }
@@ -9,7 +9,7 @@
     }
 }
 
-.App-header {
+.app-header {
     background-color: #282c34;
     min-height: 100%;
     display: flex;
@@ -28,4 +28,12 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.app-header>nav {
+    margin-bottom: 30px;
+}
+
+.app-header>nav>.app-link {
+    margin-right: 20px;
 }
