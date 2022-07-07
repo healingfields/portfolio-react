@@ -1,0 +1,24 @@
+.profile-container {
+    width: 50%;
+    margin: 10px auto;
+}
+
+.profile-avatar {
+    width: 200px;
+}
+
+.profile-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.profile-list>li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.profile-list>li>span {
+    font-weight: 600;
+}
