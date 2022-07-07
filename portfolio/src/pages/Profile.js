@@ -4,7 +4,7 @@ import Link from '../components/Link';
 import List from '../components/List';
 
 function Profile({ username }) {
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [profile, setProfile] = useState({});
     const items = [
         {
@@ -47,7 +47,7 @@ function Profile({ username }) {
                 (
                     <div>
                         <img src={profile.avatar_url} alt={profile.name} className='profile-avatar' />
-                        <List items={items} />
+                        <List items={items} styling='profile-list' />
                     </div>
                 )
             }
