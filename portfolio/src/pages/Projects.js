@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import './Projects.css'
+import { Link } from 'react-router-dom';
 
 import List from '../components/List';
-import Link from '../components/Link';
+
 
 function Projects({ username }) {
     const [loading, setLoading] = useState(true);
@@ -34,7 +35,7 @@ function Projects({ username }) {
                         <List items={projects.map((project) => (
                             {
                                 field: project.name,
-                                value: <Link url={project.html_url} title={project.html_url} />
+                                value: <Link to={`/projects/${project.name}`} >Open Project</Link>
                             }
 
                         ))} styling='project-list' />

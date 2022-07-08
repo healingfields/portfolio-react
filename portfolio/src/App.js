@@ -6,6 +6,7 @@ import Profile from './pages/Profile';
 import Projects from './pages/Projects';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ProjectDetails from './pages/ProjectDetails';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           <Route
             path='/projects'
             element={<Projects username='healingfields' />} />
+          <Route
+            path='/projects/:name'
+            element={<ProjectDetails username='healingfields' />} />
         </Routes>
       </BrowserRouter>
     </div>
