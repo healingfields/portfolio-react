@@ -10,7 +10,7 @@ function ProjectDetails({ username }) {
     useEffect(() => {
         async function fetchData() {
             const data = await fetch(
-                'https://api.github.com/repos/healingfields/Design_Area'
+                `https://api.github.com/repos/${username}/${name}`
             );
 
             const result = await data.json();
@@ -29,14 +29,13 @@ function ProjectDetails({ username }) {
     }, [username, name]);
     return (
         <div className='project-container'>
-            <h2>Project: {project.full_name}</h2>
-            <h3>Owner: {project.owner.login}</h3>
-            <h4>Url: <a href={project.url}>{project.url}</a></h4>
-            <p> created at : {project.created_at}</p>
+
             {loading ? (<span>Loading ...</span>)
                 :
                 (<div>
-                    <h2>{project.id}</h2>
+                    <h2>Project: {project.full_name}</h2>
+                    <h4>Url: <a href={project.url}>{project.url}</a></h4>
+                    <p> created at : {project.created_at}</p>
                 </div>)
             }
         </div>
